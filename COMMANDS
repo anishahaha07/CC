@@ -1,0 +1,120 @@
+
+bhandare_ani@cloudshell:~ (newpro-422814)$ git clone https://github.com/anishahaha07/CC.git
+fatal: destination path 'CC' already exists and is not an empty directory.
+bhandare_ani@cloudshell:~ (newpro-422814)$ cd CC
+bhandare_ani@cloudshell:~/CC (newpro-422814)$ ls
+app.yaml  index.html
+
+bhandare_ani@cloudshell:~/CC (newpro-422814)$ gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Settings from your current configuration [cloudshell-7674] are:
+accessibility:
+  screen_reader: 'True'
+component_manager:
+  disable_update_check: 'True'
+compute:
+  gce_metadata_read_timeout_sec: '30'
+core:
+  account: bhandare.ani@gmail.com
+  disable_usage_reporting: 'True'
+  project: newpro-422814
+metrics:
+  environment: devshell
+
+Pick configuration to use:
+ [1] Re-initialize this configuration [cloudshell-7674] with new settings 
+ [2] Create a new configuration
+Please enter your numeric choice:  2
+
+Enter configuration name. Names start with a lower case letter and contain only lower case letters a-z, digits 0-9, and hyphens '-':  deploy
+Your current configuration has been set to: [deploy]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.                                                                                                                                                              
+Reachability Check passed.
+Network diagnostic passed (1/1 checks passed).
+
+Choose the account you would like to use to perform operations for this configuration:
+ [1] bhandare.ani@gmail.com
+ [2] Log in with a new account
+Please enter your numeric choice:  1
+
+You are logged in as: [bhandare.ani@gmail.com].
+
+Pick cloud project to use: 
+ [1] angelic-tracer-420609
+ [2] ccproject-420909
+ [3] cosmic-signer-413506
+ [4] helical-button-420608
+ [5] newpro-422814
+ [6] project-420614
+ [7] smart-radio-413506
+ [8] starry-iris-413505
+ [9] Enter a project ID
+ [10] Create a new project
+Please enter numeric choice or text value (must exactly match list item):  5
+
+Your current project has been set to: [newpro-422814].
+
+Not setting default zone/region (this feature makes it easier to use
+[gcloud compute] by setting an appropriate default value for the
+--zone and --region flag).
+See https://cloud.google.com/compute/docs/gcloud-compute section on how to set
+default compute region and zone manually. If you would like [gcloud init] to be
+able to do this for you the next time you run it, make sure the
+Compute Engine API is enabled for your project on the
+https://console.developers.google.com/apis page.
+
+Created a default .boto configuration file at [/home/bhandare_ani/.boto]. See this file and
+[https://cloud.google.com/storage/docs/gsutil/commands/config] for more
+information about configuring Google Cloud Storage.
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use bhandare.ani@gmail.com by default
+* Commands will reference project `newpro-422814` by default
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [deploy]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+* Run `gcloud cheat-sheet` to see a roster of go-to `gcloud` commands.
+bhandare_ani@cloudshell:~/CC (newpro-422814)$ gcloud app deploy
+Services to deploy:
+
+descriptor:                  [/home/bhandare_ani/CC/app.yaml]
+source:                      [/home/bhandare_ani/CC]
+target project:              [newpro-422814]
+target service:              [default]
+target version:              [20240509t170900]
+target url:                  [https://newpro-422814.de.r.appspot.com]
+target service account:      [newpro-422814@appspot.gserviceaccount.com]
+
+
+Do you want to continue (Y/n)?  Y
+
+Beginning deployment of service [default]...
+Uploading 0 files to Google Cloud Storage
+100%
+File upload done.
+Updating service [default]...done.                                                                                                                                                               
+Setting traffic split for service [default]...done.                                                                                                                                              
+Deployed service [default] to [https://newpro-422814.de.r.appspot.com]
+
+You can stream logs from the command line by running:
+  $ gcloud app logs tail -s default
+
+To view your application in the web browser run:
+  $ gcloud app browse
+bhandare_ani@cloudshell:~/CC (newpro-422814)$ ^C
+bhandare_ani@cloudshell:~/CC (newpro-422814)$ gcloud app browse
+Did not detect your browser. Go to this link to view your app:
+https://newpro-422814.de.r.appspot.com
+bhandare_ani@cloudshell:~/CC (newpro-422814)$ 
